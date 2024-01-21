@@ -15,7 +15,6 @@ public class Casilla {
     }
 
     public void setFicha(Ficha ficha) throws OperationNotSupportedException {
-
         if (ficha == null) {
             throw new NullPointerException("No se puede poner una ficha nula.");
         }
