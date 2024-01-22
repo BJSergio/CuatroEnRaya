@@ -10,7 +10,6 @@ public class Tablero {
 
     public Tablero() {
         casillas = new Casilla[FILAS][COLUMNAS];
-
         for (int i = 0; i < FILAS; i++) {
             for (int j = 0; j < COLUMNAS; j++) {
                 casillas[i][j] = new Casilla();

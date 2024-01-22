@@ -45,7 +45,14 @@ public class Consola {
     }
 
     public static Jugador leerJugador(Ficha ficha) {
-        return new Jugador(leerNombre(), ficha);
+        Ficha fichaADevolver;
+
+        if (ficha.equals(Ficha.AZUL)) {
+            fichaADevolver = Ficha.VERDE;
+        } else {
+            fichaADevolver = Ficha.AZUL;
+        }
+        return new Jugador(leerNombre(), fichaADevolver);
     }
 
     public static int leerColumna(Jugador jugador) {
