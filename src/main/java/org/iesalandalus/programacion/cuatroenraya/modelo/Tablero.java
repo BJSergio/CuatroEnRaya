@@ -164,27 +164,21 @@ public class Tablero {
     @Override
     public String toString() {
 
-        StringBuilder stringBuilder = new StringBuilder();
-
+        StringBuilder tablero = new StringBuilder();
         for (int i = FILAS - 1; i >= 0; i--) {
-            stringBuilder.append('|');
+            tablero.append('|');
             for (int j = 0; j < COLUMNAS; j++) {
-                if (casillas[i][j].estaOcupada()) {
-                    stringBuilder.append(casillas[i][j].getFicha());
-                } else {
-                    stringBuilder.append(' ');
-                }
+                tablero.append(casillas[i][j]); // Ya sabe representarse por sí solo
             }
-            stringBuilder.append('|').append(System.lineSeparator());
+            tablero.append('|').append("\n");
         }
-
         for (int j = 0; j < COLUMNAS; j++) {
             if (j == 0) {
-                stringBuilder.append(' ');
+                tablero.append(' ');
             }
-            stringBuilder.append('-');
+            tablero.append('-');
         }
-        stringBuilder.append(System.lineSeparator());
-        return stringBuilder.toString().replace("\r\n", "\n");
+        tablero.append("\n");
+        return tablero.toString();
     }
 }

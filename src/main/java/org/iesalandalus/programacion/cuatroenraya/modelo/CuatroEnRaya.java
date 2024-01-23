@@ -50,6 +50,7 @@ public class CuatroEnRaya {
                 indice = 0;
             }
         } while (!tablero.estaLleno() && !esJugadaGanadora);
+
         if (tablero.estaLleno()) {
             System.out.println("No se pueden introducir más fichas, el tablero está lleno.");
         } else {

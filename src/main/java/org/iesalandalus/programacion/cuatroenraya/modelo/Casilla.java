@@ -30,19 +30,6 @@ public class Casilla {
 
     @Override
     public String toString() {
-
-        String cadena = null;
-
-        if (estaOcupada()) {
-            if (ficha.equals(Ficha.AZUL)) {
-                cadena = String.format("%c", 'A');
-            }
-            if (ficha.equals(Ficha.VERDE)) {
-                cadena = String.format("%c", 'V');
-            }
-        } else {
-            cadena = String.format("%c", ' ');
-        }
-        return cadena;
+        return estaOcupada() ? ficha.toString() : " ";
     }
 }

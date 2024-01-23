@@ -63,4 +63,9 @@ public class Consola {
         } while (columna < 0 || columna > Tablero.COLUMNAS - 1);
         return columna;
     }
+
+    public static void subrayar(String titulo) {
+        System.out.println(titulo);
+        System.out.println("-".repeat(titulo.length()));
+    }
 }
